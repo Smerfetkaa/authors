@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Елена Власова — эксперт по юридическим вопросам и защите прав | Reviews
+      Check
+    </title>
+    <meta
+      name="description"
+      content="Знакомьтесь с Еленой Власовой — юристом и автором статей. Пишет о рисках в договорах, защите прав потребителей и работе с компаниями."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Lato", sans-serif;
+        background-color: #181818;
+        color: #fff;
+        font-size: 17px;
+        line-height: 1.42857143;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      /* Author Profile Section */
+      .author-profile {
+        margin-bottom: 60px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .profile-header {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 50px;
+        align-items: flex-start;
+      }
+
+      .author-photo {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        flex-shrink: 0;
+        border: 4px solid #4452fe;
+      }
+
+      .author-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .author-info h1 {
+        font-size: 45px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+
+      .author-title {
+        font-size: 20px;
+        color: #02e4c0;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .author-stats {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 25px;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 24px;
+        font-weight: 700;
+        color: #4452fe;
+        display: block;
+      }
+
+      .stat-label {
+        font-size: 14px;
+        color: #818181;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: #4452fe;
+        color: #fff;
+        border-radius: 50%;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+
+      .social-links a:hover {
+        background: #02e4c0;
+      }
+
+      /* Biography Section */
+      .biography {
+        margin-bottom: 60px;
+      }
+
+      .section-title {
+        font-size: 35px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .bio-content {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .bio-content p {
+        margin-bottom: 20px;
+      }
+
+      .highlight {
+        color: #02e4c0;
+        font-weight: 600;
+      }
+
+      /* Expertise Section */
+      .expertise {
+        margin-bottom: 60px;
+      }
+
+      .expertise-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .expertise-item {
+        background: #343434;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .expertise-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .expertise-icon {
+        font-size: 40px;
+        color: #4452fe;
+        margin-bottom: 20px;
+      }
+
+      .expertise-item h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+
+      .expertise-item p {
+        color: #818181;
+        line-height: 1.5;
+      }
+
+      /* Articles Section */
+      .articles {
+        margin-bottom: 60px;
+      }
+
+      .articles-grid {
+        display: grid;
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .article-card {
+        background: #343434;
+        border-radius: 10px;
+        padding: 30px;
+        transition: box-shadow 0.3s;
+      }
+
+      .article-card:hover {
+        box-shadow: 0px 2px 30px rgba(68, 82, 254, 0.15);
+      }
+
+      .article-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        font-size: 14px;
+        color: #818181;
+      }
+
+      .article-rating {
+        display: flex;
+        gap: 5px;
+      }
+
+      .star {
+        color: #02e4c0;
+      }
+
+      .article-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .article-title a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .article-title a:hover {
+        color: #02e4c0;
+      }
+
+      .article-excerpt {
+        color: #818181;
+        line-height: 1.5;
+        margin-bottom: 15px;
+      }
+
+      .read-more {
+        color: #4452fe;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+
+      .read-more:hover {
+        color: #02e4c0;
+      }
+
+      /* Contact Section */
+      .contact {
+        margin-bottom: 60px;
+      }
+
+      .contact-content {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 30px;
+        align-items: flex-start;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        font-size: 18px;
+      }
+      .contact-item a {
+        text-align: start;
+        color: #fff;
+        text-decoration: none;
+      }
+      .contact-item a:hover {
+        color: #4452fe;
+      }
+      .contact-icon {
+        min-width: 50px;
+        height: 50px;
+        background: #4452fe;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .profile-header {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .author-photo {
+          width: 150px;
+          height: 150px;
+        }
+
+        .author-info h1 {
+          font-size: 35px;
+        }
+
+        .section-title {
+          font-size: 28px;
+        }
+
+        .nav-menu {
+          display: none;
+        }
+
+        .expertise-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .author-stats {
+          justify-content: center;
+        }
+        .social-links {
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 10px;
+        }
+
+        .author-info h1 {
+          font-size: 28px;
+        }
+
+        .stat-number {
+          font-size: 20px;
+        }
+
+        .bio-content {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="author-profile">
+        <div class="profile-header">
+          <div class="author-photo">
+            <img
+              src="elena-vlasova.jpg"
+              alt="Матвей Авдеев - эксперт Reviews Check"
+            />
+          </div>
+          <div class="author-info">
+            <h1>Елена Власова</h1>
+            <div class="author-title">
+              От мечты о журналистике к юридической аналитике
+            </div>
+            <div class="author-stats">
+              <div class="stat-item">
+                <!-- Динамично количество обзоров автора-->
+                <span class="stat-number">127</span>
+                <span class="stat-label">Обзоров</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">8</span>
+                <span class="stat-label">Лет опыта</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">97%</span>
+                <span class="stat-label">Точность</span>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Telegram"
+                ><i class="fab fa-telegram"></i
+              ></a>
+              <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="biography">
+        <h2 class="section-title">О специалисте</h2>
+        <div class="bio-content">
+          <p>
+            Меня зовут <span class="highlight">Елена Власова</span>. Родилась в
+            Твери, здесь же окончила юридический факультет. Ещё во время учёбы я
+            поняла, что мне интересно не только работать с законами, но и
+            объяснять их смысл другим людям. Я любила писать: сначала короткие
+            заметки для студенческой газеты, потом небольшие разъяснения для
+            знакомых и клиентов, которые сталкивались с непонятными договорами
+            или спорными ситуациями.
+          </p>
+          <p>
+            После университета я несколько лет работала помощником адвоката.
+            Юридическая практика дала мне хороший фундамент, но больше всего мне
+            нравилось именно общаться с людьми и
+            <span class="highlight"
+              >помогать им разбираться в сложных вопросах</span
+            >. Постепенно это увлечение переросло в статьи: сначала для
+            региональных СМИ, потом для специализированных блогов.
+          </p>
+          <p>
+            Сегодня я продолжаю совмещать юриспруденцию и любовь к письму. На
+            портале <span class="highlight">reviews-check.com</span> я готовлю
+            материалы о том, как работают юридические и консалтинговые компании,
+            какие подводные камни могут встретиться у клиентов и как защитить
+            свои интересы. Мне важно не просто анализировать, а
+            <span class="highlight"
+              >делиться знаниями простым и понятным языком.</span
+            >
+            Именно это я всегда считала своей главной задачей как юриста и как
+            автора.
+          </p>
+        </div>
+      </section>
+
+      <section class="expertise">
+        <h2 class="section-title">Области экспертизы</h2>
+        <div class="expertise-grid">
+          <div class="expertise-item">
+            <div class="expertise-icon">
+              <i class="fa-solid fa-chart-column"></i>
+            </div>
+            <h3>Форекс и финансовые сервисы</h3>
+            <p>
+              Обзор юридических рисков при работе с форекс-компаниями и другими
+              онлайн-площадками. Рассказываю, на что обращать внимание в
+              договорах, какие условия считаются безопасными, а какие могут
+              привести к проблемам для клиента.
+            </p>
+          </div>
+          <div class="expertise-item">
+            <div class="expertise-icon">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <h3>Образовательные, юридические и бизнес-услуги</h3>
+            <p>
+              Проверка компаний, которые предлагают обучение, юридическую помощь
+              или консультации. Анализ договоров, условий и репутации таких
+              сервисов, чтобы читатели понимали, какие из них заслуживают
+              доверия, а где есть риск столкнуться с недобросовестными
+              практиками.
+            </p>
+          </div>
+          <div class="expertise-item">
+            <div class="expertise-icon">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <h3>Защита прав потребителей</h3>
+            <p>
+              Практические рекомендации для клиентов, которые столкнулись с
+              неправомерными требованиями, отказами в возврате средств или
+              навязанными услугами.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--  Если этот блок можно сделать динамичным тоже - добавляем, если нет - не добавлять совсем -->
+      <section class="articles">
+        <div class="section-title">Последние обзоры</div>
+        <div class="articles-grid">
+          <article class="article-card">
+            <div class="article-meta">
+              <span>15 января 2025</span>
+              <div class="article-rating">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+              </div>
+            </div>
+            <p class="article-title">
+              <a href="#"
+                >WhatsApp AI отзывы — обзор drimly.top и рисков автоматической
+                торговли</a
+              >
+            </p>
+            <p class="article-excerpt">
+              Подробный анализ платформы WhatsApp AI, которая обещает
+              автоматическую торговлю через мессенджер. Выявлены критические
+              недостатки в юридической структуре и высокие риски для инвесторов.
+            </p>
+            <a href="#" class="read-more">Читать полный обзор →</a>
+          </article>
+
+          <article class="article-card">
+            <div class="article-meta">
+              <span>12 января 2025</span>
+              <div class="article-rating">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+              </div>
+            </div>
+            <p class="article-title">
+              <a href="#"
+                >CryptoFX обзор: анализ брокера и торговых условий 2025</a
+              >
+            </p>
+            <p class="article-excerpt">
+              Всесторонний анализ брокера CryptoFX - лицензии, спреды, платформы
+              и отзывы клиентов. Рассматриваем преимущества и недостатки для
+              российских трейдеров.
+            </p>
+            <a href="#" class="read-more">Читать полный обзор →</a>
+          </article>
+
+          <article class="article-card">
+            <div class="article-meta">
+              <span>8 января 2025</span>
+              <div class="article-rating">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+              </div>
+            </div>
+            <p class="article-title">
+              <a href="#"
+                >InvestPlatform Pro: честный обзор инвестиционной платформы</a
+              >
+            </p>
+            <p class="article-excerpt">
+              Детальное исследование популярной инвестиционной платформы
+              InvestPlatform Pro. Анализ доходности, рисков, лицензий и
+              пользовательского опыта.
+            </p>
+            <a href="#" class="read-more">Читать полный обзор →</a>
+          </article>
+
+          <article class="article-card">
+            <div class="article-meta">
+              <span>5 января 2025</span>
+              <div class="article-rating">
+                <i class="fas fa-star star"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+              </div>
+            </div>
+            <p class="article-title">
+              <a href="#"
+                >QuickProfit обзор: почему эта платформа может быть
+                мошенничеством</a
+              >
+            </p>
+            <p class="article-excerpt">
+              Расследование деятельности QuickProfit - платформы, обещающей
+              быструю прибыль. Обнаружены серьезные нарушения и признаки
+              финансовой пирамиды.
+            </p>
+            <a href="#" class="read-more">Читать полный обзор →</a>
+          </article>
+
+          <article class="article-card">
+            <div class="article-meta">
+              <span>2 января 2025</span>
+              <div class="article-rating">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+              </div>
+            </div>
+            <p class="article-title">
+              <a href="#">MetaTrader брокеры 2025: топ-10 надежных компаний</a>
+            </p>
+            <p class="article-excerpt">
+              Составлен рейтинг лучших брокеров, предоставляющих торговлю через
+              MetaTrader 4 и 5. Сравнение условий, спредов и качества исполнения
+              ордеров.
+            </p>
+            <a href="#" class="read-more">Читать полный обзор →</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact">
+        <p class="section-title">Связаться с экспертом</p>
+        <div class="contact-content">
+          <p style="margin-bottom: 30px; font-size: 18px; color: #818181">
+            Если у вас есть вопросы о конкретной платформе или вы хотите
+            предложить компанию для анализа, свяжитесь со мной любым удобным
+            способом.
+          </p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <a href="#">
+                <strong>Email:</strong> elena.vlasova@reviews-check.com
+              </a>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-telegram"></i>
+              </div>
+              <a href="#"><strong>Telegram:</strong> @ElenaVlasovaExpert</a>
+            </div>
+            <!-- <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <a href="#">
+                <strong>LinkedIn:</strong> /in/alexander-petrov-financial-expert
+              </a>
+            </div> -->
+          </div>
+          <p style="margin-top: 30px; font-size: 14px; color: #818181">
+            Время ответа: в течение 24 часов в рабочие дни
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

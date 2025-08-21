@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Артём Кравцов - Эксперт по инвестиционным компаниям | Reviews Check
+    </title>
+    <meta
+      name="description"
+      content="Страница об авторе Артёме Кравцове — инвесторе и аналитике, который пишет о брокерах и инвестиционных компаниях. Узнайте больше о его опыте и проектах."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Lato", sans-serif;
+        background-color: #181818;
+        color: #fff;
+        font-size: 17px;
+        line-height: 1.42857143;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      /* Author Profile Section */
+      .author-profile {
+        margin-bottom: 60px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .profile-header {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 50px;
+        align-items: flex-start;
+      }
+
+      .author-photo {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        flex-shrink: 0;
+        border: 4px solid #4452fe;
+      }
+
+      .author-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .author-info h1 {
+        font-size: 45px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+
+      .author-title {
+        font-size: 20px;
+        color: #02e4c0;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .author-stats {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 25px;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 24px;
+        font-weight: 700;
+        color: #4452fe;
+        display: block;
+      }
+
+      .stat-label {
+        font-size: 14px;
+        color: #818181;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: #4452fe;
+        color: #fff;
+        border-radius: 50%;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+
+      .social-links a:hover {
+        background: #02e4c0;
+      }
+
+      /* Biography Section */
+      .biography {
+        margin-bottom: 60px;
+      }
+
+      .section-title {
+        font-size: 35px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .bio-content {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .bio-content p {
+        margin-bottom: 20px;
+      }
+
+      .highlight {
+        color: #02e4c0;
+        font-weight: 600;
+      }
+
+      /* Expertise Section */
+      .expertise {
+        margin-bottom: 60px;
+      }
+
+      .expertise-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .expertise-item {
+        background: #343434;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .expertise-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .expertise-icon {
+        font-size: 40px;
+        color: #4452fe;
+        margin-bottom: 20px;
+      }
+
+      .expertise-item h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+
+      .expertise-item p {
+        color: #818181;
+        line-height: 1.5;
+      }
+
+      /* Articles Section */
+      .articles {
+        margin-bottom: 60px;
+      }
+
+      .articles-grid {
+        display: grid;
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .article-card {
+        background: #343434;
+        border-radius: 10px;
+        padding: 30px;
+        transition: box-shadow 0.3s;
+      }
+
+      .article-card:hover {
+        box-shadow: 0px 2px 30px rgba(68, 82, 254, 0.15);
+      }
+
+      .article-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        font-size: 14px;
+        color: #818181;
+      }
+
+      .article-rating {
+        display: flex;
+        gap: 5px;
+      }
+
+      .star {
+        color: #02e4c0;
+      }
+
+      .article-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .article-title a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .article-title a:hover {
+        color: #02e4c0;
+      }
+
+      .article-excerpt {
+        color: #818181;
+        line-height: 1.5;
+        margin-bottom: 15px;
+      }
+
+      .read-more {
+        color: #4452fe;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+
+      .read-more:hover {
+        color: #02e4c0;
+      }
+
+      /* Contact Section */
+      .contact {
+        margin-bottom: 60px;
+      }
+
+      .contact-content {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 30px;
+        align-items: flex-start;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        font-size: 18px;
+      }
+      .contact-item a {
+        text-align: start;
+        color: #fff;
+        text-decoration: none;
+      }
+      .contact-item a:hover {
+        color: #4452fe;
+      }
+      .contact-icon {
+        min-width: 50px;
+        height: 50px;
+        background: #4452fe;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .profile-header {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .author-photo {
+          width: 150px;
+          height: 150px;
+        }
+
+        .author-info h1 {
+          font-size: 35px;
+        }
+
+        .section-title {
+          font-size: 28px;
+        }
+
+        .nav-menu {
+          display: none;
+        }
+
+        .expertise-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .author-stats {
+          justify-content: center;
+        }
+        .social-links {
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 10px;
+        }
+
+        .author-info h1 {
+          font-size: 28px;
+        }
+
+        .stat-number {
+          font-size: 20px;
+        }
+
+        .bio-content {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="author-profile">
+        <div class="profile-header">
+          <div class="author-photo">
+            <img
+              src="artem-kravtsov.jpg"
+              alt="Артём Кравцов - эксперт Reviews Check"
+            />
+          </div>
+          <div class="author-info">
+            <h1>Артём Кравцов</h1>
+            <div class="author-title">
+              От первых инвестиций к аналитическим публикациям
+            </div>
+            <div class="author-stats">
+              <div class="stat-item">
+                <!-- Динамично количество обзоров автора-->
+                <span class="stat-number">127</span>
+                <span class="stat-label">Обзоров</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">12</span>
+                <span class="stat-label">Лет опыта</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Точность</span>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Telegram"
+                ><i class="fab fa-telegram"></i
+              ></a>
+              <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="biography">
+        <h2 class="section-title">О специалисте</h2>
+        <div class="bio-content">
+          <p>
+            Меня зовут <span class="highlight">Артём Кравцов</span>, мне 35 лет.
+            Родился в Новосибирске и окончил Новосибирский государственный
+            университет по направлению “Финансы и кредит”. Ещё в студенчестве
+            сделал первые шаги на форекс-рынке и попробовал работать с
+            брокерами. Этот опыт был не всегда удачным, но именно он научил меня
+            критично смотреть на рекламные обещания и искать реальные
+            подтверждения надёжности компаний.
+          </p>
+          <p>
+            Со временем я стал писать аналитические заметки для финансовых
+            форумов и публиковал новостные материалы для одного из
+            форекс-порталов. Постепенно работа с контентом превратилась для меня
+            в основное направление:
+            <span class="highlight"
+              >я понял, что мне интересно объяснять другим то, что сам уже успел
+              пройти и проанализировать.</span
+            >
+          </p>
+          <p>
+            Сегодня я сотрудничаю с
+            <span class="highlight">reviews-check.com</span> и публикую обзоры
+            инвестиционных сервисов, материалы о работе брокеров и аналитические
+            статьи о рисках. Моя цель — помогать читателям делать осознанные
+            шаги в мире финансов и отличать надёжные инструменты от сомнительных
+            схем.
+          </p>
+          <p>
+            В свободное время я люблю читать книги по истории экономики и
+            путешествовать, а также проводить время с семьей. Именно с рождением
+            ребёнка я стал особенно остро понимать, насколько важно правильно
+            распоряжаться деньгами. Ведь от того, насколько грамотно мы
+            инвестируем сейчас, зависит, будет ли у семьи подушка безопасности и
+            смогут ли дети вступить во взрослую жизнь более уверенно. Поэтому
+            для меня инвестиции перестали быть просто профессиональным интересом
+            — они стали частью личной ответственности за будущее.
+          </p>
+        </div>
+      </section>
+
+      <section class="expertise">
+        <h2 class="section-title">Области экспертизы</h2>
+        <div class="expertise-grid">
+          <div class="expertise-item">
+            <div class="expertise-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Анализ брокеров и инвестиционных компаний</h3>
+            <p>
+              Изучение лицензий, торговых условий и прозрачности работы
+              платформ. Помогаю читателям понять, какие компании заслуживают
+              доверия, а какие вызывают сомнения.
+            </p>
+          </div>
+          <div class="expertise-item">
+            <div class="expertise-icon">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <h3>Управление личными инвестициями</h3>
+            <p>
+              Практический опыт инвестирования в разные инструменты. Делюсь
+              личными наблюдениями о том, как формировать стратегию и избегать
+              типичных ошибок новичков.
+            </p>
+          </div>
+          <div class="expertise-item">
+            <div class="expertise-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Финансовая безопасность и защита капитала</h3>
+            <p>
+              Разбор схем, которые могут привести к потерям, и рекомендации о
+              том, как минимизировать риски. Моя цель — показать, что инвестиции
+              должны работать на будущее семьи, а не превращаться в источник
+              проблем.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--  Если этот блок можно сделать динамичным тоже - добавляем, если нет - не добавлять совсем -->
+      <section class="articles">
+        <div class="section-title">Последние обзоры</div>
+        <div class="articles-grid">
+          <article class="article-card">
+            <div class="article-meta">
+              <span>15 января 2025</span>
+              <div class="article-rating">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+              </div>
+            </div>
+            <p class="article-title">
+              <a href="#"
+                >WhatsApp AI отзывы — обзор drimly.top и рисков автоматической
+                торговли</a
+              >
+            </p>
+            <p class="article-excerpt">
+              Подробный анализ платформы WhatsApp AI, которая обещает
+              автоматическую торговлю через мессенджер. Выявлены критические
+              недостатки в юридической структуре и высокие риски для инвесторов.
+            </p>
+            <a href="#" class="read-more">Читать полный обзор →</a>
+          </article>
+
+          <article class="article-card">
+            <div class="article-meta">
+              <span>12 января 2025</span>
+              <div class="article-rating">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+              </div>
+            </div>
+            <p class="article-title">
+              <a href="#"
+                >CryptoFX обзор: анализ брокера и торговых условий 2025</a
+              >
+            </p>
+            <p class="article-excerpt">
+              Всесторонний анализ брокера CryptoFX - лицензии, спреды, платформы
+              и отзывы клиентов. Рассматриваем преимущества и недостатки для
+              российских трейдеров.
+            </p>
+            <a href="#" class="read-more">Читать полный обзор →</a>
+          </article>
+
+          <article class="article-card">
+            <div class="article-meta">
+              <span>8 января 2025</span>
+              <div class="article-rating">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+              </div>
+            </div>
+            <p class="article-title">
+              <a href="#"
+                >InvestPlatform Pro: честный обзор инвестиционной платформы</a
+              >
+            </p>
+            <p class="article-excerpt">
+              Детальное исследование популярной инвестиционной платформы
+              InvestPlatform Pro. Анализ доходности, рисков, лицензий и
+              пользовательского опыта.
+            </p>
+            <a href="#" class="read-more">Читать полный обзор →</a>
+          </article>
+
+          <article class="article-card">
+            <div class="article-meta">
+              <span>5 января 2025</span>
+              <div class="article-rating">
+                <i class="fas fa-star star"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+              </div>
+            </div>
+            <p class="article-title">
+              <a href="#"
+                >QuickProfit обзор: почему эта платформа может быть
+                мошенничеством</a
+              >
+            </p>
+            <p class="article-excerpt">
+              Расследование деятельности QuickProfit - платформы, обещающей
+              быструю прибыль. Обнаружены серьезные нарушения и признаки
+              финансовой пирамиды.
+            </p>
+            <a href="#" class="read-more">Читать полный обзор →</a>
+          </article>
+
+          <article class="article-card">
+            <div class="article-meta">
+              <span>2 января 2025</span>
+              <div class="article-rating">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+              </div>
+            </div>
+            <p class="article-title">
+              <a href="#">MetaTrader брокеры 2025: топ-10 надежных компаний</a>
+            </p>
+            <p class="article-excerpt">
+              Составлен рейтинг лучших брокеров, предоставляющих торговлю через
+              MetaTrader 4 и 5. Сравнение условий, спредов и качества исполнения
+              ордеров.
+            </p>
+            <a href="#" class="read-more">Читать полный обзор →</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact">
+        <p class="section-title">Связаться с экспертом</p>
+        <div class="contact-content">
+          <p style="margin-bottom: 30px; font-size: 18px; color: #818181">
+            Если у вас есть вопросы о конкретной платформе или вы хотите
+            предложить компанию для анализа, свяжитесь со мной любым удобным
+            способом.
+          </p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <a href="#">
+                <strong>Email:</strong> artem.kravtsov@reviews-check.com
+              </a>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-telegram"></i>
+              </div>
+              <a href="#"><strong>Telegram:</strong> @ArtemKravtsovExpert</a>
+            </div>
+            <!-- <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <a href="#">
+                <strong>LinkedIn:</strong> /in/alexander-petrov-financial-expert
+              </a>
+            </div> -->
+          </div>
+          <p style="margin-top: 30px; font-size: 14px; color: #818181">
+            Время ответа: в течение 24 часов в рабочие дни
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

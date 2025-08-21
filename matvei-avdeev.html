@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Матвей Авдеев - Эксперт по криптовалютным компаниям | Reviews Check
+    </title>
+    <meta
+      name="description"
+      content="Об авторе: Матвей Авдеев — аналитик и эксперт по криптовалютным компаниям. Биография, профессиональный путь и вклад в развитие проекта."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Lato", sans-serif;
+        background-color: #181818;
+        color: #fff;
+        font-size: 17px;
+        line-height: 1.42857143;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      /* Author Profile Section */
+      .author-profile {
+        margin-bottom: 60px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .profile-header {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 50px;
+        align-items: flex-start;
+      }
+
+      .author-photo {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        flex-shrink: 0;
+        border: 4px solid #4452fe;
+      }
+
+      .author-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .author-info h1 {
+        font-size: 45px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+
+      .author-title {
+        font-size: 20px;
+        color: #02e4c0;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .author-stats {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 25px;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 24px;
+        font-weight: 700;
+        color: #4452fe;
+        display: block;
+      }
+
+      .stat-label {
+        font-size: 14px;
+        color: #818181;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: #4452fe;
+        color: #fff;
+        border-radius: 50%;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+
+      .social-links a:hover {
+        background: #02e4c0;
+      }
+
+      /* Biography Section */
+      .biography {
+        margin-bottom: 60px;
+      }
+
+      .section-title {
+        font-size: 35px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .bio-content {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .bio-content p {
+        margin-bottom: 20px;
+      }
+
+      .highlight {
+        color: #02e4c0;
+        font-weight: 600;
+      }
+
+      /* Expertise Section */
+      .expertise {
+        margin-bottom: 60px;
+      }
+
+      .expertise-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .expertise-item {
+        background: #343434;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .expertise-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .expertise-icon {
+        font-size: 40px;
+        color: #4452fe;
+        margin-bottom: 20px;
+      }
+
+      .expertise-item h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+
+      .expertise-item p {
+        color: #818181;
+        line-height: 1.5;
+      }
+
+      /* Articles Section */
+      .articles {
+        margin-bottom: 60px;
+      }
+
+      .articles-grid {
+        display: grid;
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .article-card {
+        background: #343434;
+        border-radius: 10px;
+        padding: 30px;
+        transition: box-shadow 0.3s;
+      }
+
+      .article-card:hover {
+        box-shadow: 0px 2px 30px rgba(68, 82, 254, 0.15);
+      }
+
+      .article-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        font-size: 14px;
+        color: #818181;
+      }
+
+      .article-rating {
+        display: flex;
+        gap: 5px;
+      }
+
+      .star {
+        color: #02e4c0;
+      }
+
+      .article-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .article-title a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .article-title a:hover {
+        color: #02e4c0;
+      }
+
+      .article-excerpt {
+        color: #818181;
+        line-height: 1.5;
+        margin-bottom: 15px;
+      }
+
+      .read-more {
+        color: #4452fe;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+
+      .read-more:hover {
+        color: #02e4c0;
+      }
+
+      /* Contact Section */
+      .contact {
+        margin-bottom: 60px;
+      }
+
+      .contact-content {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 30px;
+        align-items: flex-start;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        font-size: 18px;
+      }
+      .contact-item a {
+        text-align: start;
+        color: #fff;
+        text-decoration: none;
+      }
+      .contact-item a:hover {
+        color: #4452fe;
+      }
+      .contact-icon {
+        min-width: 50px;
+        height: 50px;
+        background: #4452fe;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .profile-header {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .author-photo {
+          width: 150px;
+          height: 150px;
+        }
+
+        .author-info h1 {
+          font-size: 35px;
+        }
+
+        .section-title {
+          font-size: 28px;
+        }
+
+        .nav-menu {
+          display: none;
+        }
+
+        .expertise-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .author-stats {
+          justify-content: center;
+        }
+        .social-links {
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 10px;
+        }
+
+        .author-info h1 {
+          font-size: 28px;
+        }
+
+        .stat-number {
+          font-size: 20px;
+        }
+
+        .bio-content {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="author-profile">
+        <div class="profile-header">
+          <div class="author-photo">
+            <img
+              src="matvei-avdeev.jpg"
+              alt="Матвей Авдеев - эксперт Reviews Check"
+            />
+          </div>
+          <div class="author-info">
+            <h1>Матвей Авдеев</h1>
+            <div class="author-title">Из IT-сферы в криптоаналитику</div>
+            <div class="author-stats">
+              <div class="stat-item">
+                <!-- Динамично количество обзоров автора-->
+                <span class="stat-number">127</span>
+                <span class="stat-label">Обзоров</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Лет опыта</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Точность</span>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Telegram"
+                ><i class="fab fa-telegram"></i
+              ></a>
+              <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="biography">
+        <h2 class="section-title">О специалисте</h2>
+        <div class="bio-content">
+          <p>
+            Я — <span class="highlight">Матвей Авдеев</span>. Впервые
+            познакомился с криптовалютами в 2016 году, когда учился на первом
+            курсе Уральского федерального университета. Мне было 18 и тогда всё
+            казалось экспериментом: я пробовал торговать на первых доступных
+            площадках, интересовался стейкингом и изучал, какие возможности
+            открывает блокчейн.Тогда никто вокруг толком не понимал, что это и
+            зачем, а для меня это стало отправной точкой: хотелось самому
+            разобраться, как устроена система, где нет посредников и всё
+            работает на алгоритмах.
+          </p>
+          <p>
+            Как и многие, я начинал с малого и делал ошибки — где-то терял на
+            комиссиях, где-то вёлся на громкие обещания. Но именно этот опыт дал
+            мне понимание, что
+            <span class="highlight"
+              >за красивыми словами часто скрываются серьёзные риски</span
+            >. Я быстро понял: если хочешь работать с криптой — нужно уметь
+            проверять проекты, искать слабые места и задавать правильные
+            вопросы.
+          </p>
+          <p>
+            Позже я начал делиться опытом в студенческих чатах и на форумах,
+            объясняя простыми словами, что такое приватные ключи, как хранить
+            криптовалюту и почему не стоит доверять проектам, которые обещают
+            «золотые горы». Так постепенно у меня появился опыт написания
+            заметок и статей, а потом и полноценные аналитические материалы.
+          </p>
+          <p>
+            Сегодня я публикуюсь на
+            <span class="highlight">reviews-check.com</span>. Здесь я
+            рассказываю о биржах, криптопроектах, DeFi и инструментах хранения
+            цифровых активов. Для меня крипта — это не просто способ заработать,
+            а часть жизни, которая заставляет быть внимательным, учиться новому
+            и думать о будущем финансов более свободно и независимо.
+          </p>
+          <p>
+            В жизни я остаюсь тем же человеком, который любит технологии и
+            эксперименты. Могу часами ковыряться в коде, а вечером обсуждать с
+            друзьями последние новости крипторынка. Для меня эта сфера — не
+            работа и не хобби, а часть жизни, которая постоянно держит в тонусе
+            и заставляет учиться новому каждый день.
+          </p>
+        </div>
+      </section>
+
+      <section class="expertise">
+        <h2 class="section-title">Области экспертизы</h2>
+        <div class="expertise-grid">
+          <div class="expertise-item">
+            <div class="expertise-icon">
+              <i class="fa-brands fa-bitcoin"></i>
+            </div>
+            <h3>Криптовалютные биржи и платформы</h3>
+            <p>
+              Анализ работы торговых площадок, обзор их функций и условий.
+              Помогаю читателям разобраться, какие биржи заслуживают доверия, а
+              какие вызывают вопросы.
+            </p>
+          </div>
+          <div class="expertise-item">
+            <div class="expertise-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Безопасность цифровых активов</h3>
+            <p>
+              Разбор кошельков, методов хранения и защиты криптовалют. Поделюсь
+              практическим опытом, как минимизировать риски при работе с
+              цифровыми активами.
+            </p>
+          </div>
+          <div class="expertise-item">
+            <div class="expertise-icon">
+              <i class="fa-solid fa-hexagon-nodes"></i>
+            </div>
+            <h3>Новые технологии и криптопроекты</h3>
+            <p>
+              Обзор DeFi-проектов, криптоигр и инновационных решений на
+              блокчейне. Оцениваю перспективность идей и риски вложений в новые
+              форматы цифровых инвестиций.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--  Если этот блок можно сделать динамичным тоже - добавляем, если нет - не добавлять совсем -->
+      <section class="articles">
+        <div class="section-title">Последние обзоры</div>
+        <div class="articles-grid">
+          <article class="article-card">
+            <div class="article-meta">
+              <span>15 января 2025</span>
+              <div class="article-rating">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+              </div>
+            </div>
+            <p class="article-title">
+              <a href="#"
+                >WhatsApp AI отзывы — обзор drimly.top и рисков автоматической
+                торговли</a
+              >
+            </p>
+            <p class="article-excerpt">
+              Подробный анализ платформы WhatsApp AI, которая обещает
+              автоматическую торговлю через мессенджер. Выявлены критические
+              недостатки в юридической структуре и высокие риски для инвесторов.
+            </p>
+            <a href="#" class="read-more">Читать полный обзор →</a>
+          </article>
+
+          <article class="article-card">
+            <div class="article-meta">
+              <span>12 января 2025</span>
+              <div class="article-rating">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+              </div>
+            </div>
+            <p class="article-title">
+              <a href="#"
+                >CryptoFX обзор: анализ брокера и торговых условий 2025</a
+              >
+            </p>
+            <p class="article-excerpt">
+              Всесторонний анализ брокера CryptoFX - лицензии, спреды, платформы
+              и отзывы клиентов. Рассматриваем преимущества и недостатки для
+              российских трейдеров.
+            </p>
+            <a href="#" class="read-more">Читать полный обзор →</a>
+          </article>
+
+          <article class="article-card">
+            <div class="article-meta">
+              <span>8 января 2025</span>
+              <div class="article-rating">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+              </div>
+            </div>
+            <p class="article-title">
+              <a href="#"
+                >InvestPlatform Pro: честный обзор инвестиционной платформы</a
+              >
+            </p>
+            <p class="article-excerpt">
+              Детальное исследование популярной инвестиционной платформы
+              InvestPlatform Pro. Анализ доходности, рисков, лицензий и
+              пользовательского опыта.
+            </p>
+            <a href="#" class="read-more">Читать полный обзор →</a>
+          </article>
+
+          <article class="article-card">
+            <div class="article-meta">
+              <span>5 января 2025</span>
+              <div class="article-rating">
+                <i class="fas fa-star star"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+                <i class="far fa-star" style="color: #818181"></i>
+              </div>
+            </div>
+            <p class="article-title">
+              <a href="#"
+                >QuickProfit обзор: почему эта платформа может быть
+                мошенничеством</a
+              >
+            </p>
+            <p class="article-excerpt">
+              Расследование деятельности QuickProfit - платформы, обещающей
+              быструю прибыль. Обнаружены серьезные нарушения и признаки
+              финансовой пирамиды.
+            </p>
+            <a href="#" class="read-more">Читать полный обзор →</a>
+          </article>
+
+          <article class="article-card">
+            <div class="article-meta">
+              <span>2 января 2025</span>
+              <div class="article-rating">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+              </div>
+            </div>
+            <p class="article-title">
+              <a href="#">MetaTrader брокеры 2025: топ-10 надежных компаний</a>
+            </p>
+            <p class="article-excerpt">
+              Составлен рейтинг лучших брокеров, предоставляющих торговлю через
+              MetaTrader 4 и 5. Сравнение условий, спредов и качества исполнения
+              ордеров.
+            </p>
+            <a href="#" class="read-more">Читать полный обзор →</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact">
+        <p class="section-title">Связаться с экспертом</p>
+        <div class="contact-content">
+          <p style="margin-bottom: 30px; font-size: 18px; color: #818181">
+            Если у вас есть вопросы о конкретной платформе или вы хотите
+            предложить компанию для анализа, свяжитесь со мной любым удобным
+            способом.
+          </p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <a href="#">
+                <strong>Email:</strong> matvei.avdeev@reviews-check.com
+              </a>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-telegram"></i>
+              </div>
+              <a href="#"><strong>Telegram:</strong> @MatveiAvdeevExpert</a>
+            </div>
+            <!-- <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <a href="#">
+                <strong>LinkedIn:</strong> /in/alexander-petrov-financial-expert
+              </a>
+            </div> -->
+          </div>
+          <p style="margin-top: 30px; font-size: 14px; color: #818181">
+            Время ответа: в течение 24 часов в рабочие дни
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
