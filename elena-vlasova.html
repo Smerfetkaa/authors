@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Елена Власова — эксперт по юридическим вопросам и защите прав | Reviews
-      Check
+      Елена Власова — эксперт по юридическим вопросам и защите прав |
+      Stablereviews
     </title>
     <meta
       name="description"
@@ -28,8 +28,8 @@
 
       body {
         font-family: "Lato", sans-serif;
-        background-color: #181818;
-        color: #fff;
+        background-color: #fff;
+        color: #333;
         font-size: 17px;
         line-height: 1.42857143;
         min-height: 100vh;
@@ -51,35 +51,32 @@
       .profile-header {
         display: flex;
         gap: 40px;
-        margin-bottom: 50px;
+
+        padding: 50px 0;
         align-items: flex-start;
       }
 
       .author-photo {
         width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        overflow: hidden;
         flex-shrink: 0;
-        border: 4px solid #4452fe;
       }
 
       .author-photo img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
       }
 
       .author-info h1 {
         font-size: 45px;
         font-weight: 700;
         margin-bottom: 15px;
-        color: #fff;
+        color: #3e3e3e;
       }
 
       .author-title {
         font-size: 20px;
-        color: #02e4c0;
+        color: #3e3e3e;
         margin-bottom: 20px;
         font-weight: 600;
       }
@@ -97,7 +94,7 @@
       .stat-number {
         font-size: 24px;
         font-weight: 700;
-        color: #4452fe;
+        color: #907dff;
         display: block;
       }
 
@@ -117,7 +114,7 @@
         justify-content: center;
         width: 40px;
         height: 40px;
-        background: #4452fe;
+        background: #907dff;
         color: #fff;
         border-radius: 50%;
         text-decoration: none;
@@ -125,7 +122,7 @@
       }
 
       .social-links a:hover {
-        background: #02e4c0;
+        background: #3e3e3e;
       }
 
       /* Biography Section */
@@ -152,7 +149,7 @@
       }
 
       .highlight {
-        color: #02e4c0;
+        color: #907dff;
         font-weight: 600;
       }
 
@@ -170,11 +167,11 @@
       }
 
       .expertise-item {
-        background: #343434;
         padding: 30px;
         border-radius: 10px;
         text-align: center;
         transition: transform 0.3s;
+        box-shadow: 10px 4px 12px #8f7cfd99, 0 12px 20px #3f3771c2;
       }
 
       .expertise-item:hover {
@@ -183,13 +180,14 @@
 
       .expertise-icon {
         font-size: 40px;
-        color: #4452fe;
+        color: #907dff;
         margin-bottom: 20px;
       }
 
       .expertise-item h3 {
         font-size: 20px;
         margin-bottom: 15px;
+        color: #3e3e3e;
       }
 
       .expertise-item p {
@@ -210,14 +208,14 @@
       }
 
       .article-card {
-        background: #343434;
         border-radius: 10px;
         padding: 30px;
         transition: box-shadow 0.3s;
+        box-shadow: 0px 2px 30px rgb(68 82 254 / 28%);
       }
 
       .article-card:hover {
-        box-shadow: 0px 2px 30px rgba(68, 82, 254, 0.15);
+        box-shadow: 10px 4px 12px #8f7cfd99, 0 12px 20px #3f3771c2;
       }
 
       .article-meta {
@@ -235,7 +233,7 @@
       }
 
       .star {
-        color: #02e4c0;
+        color: #ffbb00;
       }
 
       .article-title {
@@ -245,13 +243,13 @@
       }
 
       .article-title a {
-        color: #fff;
+        color: #202020;
         text-decoration: none;
         transition: color 0.3s;
       }
 
       .article-title a:hover {
-        color: #02e4c0;
+        color: #3e3e3e;
       }
 
       .article-excerpt {
@@ -261,14 +259,14 @@
       }
 
       .read-more {
-        color: #4452fe;
+        color: #907dff;
         text-decoration: none;
         font-weight: 600;
         transition: color 0.3s;
       }
 
       .read-more:hover {
-        color: #02e4c0;
+        color: #3e3e3e;
       }
 
       /* Contact Section */
@@ -299,16 +297,16 @@
       }
       .contact-item a {
         text-align: start;
-        color: #fff;
+        color: #3e3e3e;
         text-decoration: none;
       }
       .contact-item a:hover {
-        color: #4452fe;
+        color: #907dff;
       }
       .contact-icon {
         min-width: 50px;
         height: 50px;
-        background: #4452fe;
+        background: #907dff;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -378,8 +376,8 @@
         <div class="profile-header">
           <div class="author-photo">
             <img
-              src="elena-vlasova.jpg"
-              alt="Матвей Авдеев - эксперт Reviews Check"
+              src="elena-vlasova.png"
+              alt="Елена Власова - эксперт Stablereviews"
             />
           </div>
           <div class="author-info">
@@ -403,16 +401,46 @@
               </div>
             </div>
             <div class="social-links">
-              <a href="#" aria-label="LinkedIn"
+              <!-- <a
+                href="https://www.linkedin.com/in/elena-vlasova-a37a5937b"
+                target="_blank"
+                aria-label="LinkedIn"
                 ><i class="fab fa-linkedin"></i
+              ></a> -->
+              <a
+                href="https://medium.com/@elena.vlasova"
+                aria-label="Medium"
+                target="_blank"
+                ><i class="fa-brands fa-medium"></i
               ></a>
-              <a href="#" aria-label="Twitter"
-                ><i class="fab fa-twitter"></i
+              <!-- <a
+                href="https://www.instagram.com/elena_vlasova_author/"
+                aria-label="instagram"
+                target="_blank"
+                ><i class="fa-brands fa-instagram"></i
               ></a>
-              <a href="#" aria-label="Telegram"
+              <a
+                href="https://www.reddit.com/user/Elena_Vlasova/"
+                aria-label="Reddit"
+                target="_blank"
+                ><i class="fa-brands fa-reddit"></i
+              ></a>
+              <a
+                href="https://x.com/Elena2180542815"
+                aria-label="Twitter"
+                target="_blank"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a> -->
+              <!-- <a href="#" aria-label="Telegram" target="_blank"
                 ><i class="fab fa-telegram"></i
+              ></a> -->
+
+              <a
+                href="mailto:elena.vlasova@stablereviews.com"
+                aria-label="Email"
+                target="_blank"
+                ><i class="fas fa-envelope"></i
               ></a>
-              <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
           </div>
         </div>
@@ -441,7 +469,7 @@
           </p>
           <p>
             Сегодня я продолжаю совмещать юриспруденцию и любовь к письму. На
-            портале <span class="highlight">reviews-check.com</span> я готовлю
+            портале <span class="highlight">stblreviews.com</span> я готовлю
             материалы о том, как работают юридические и консалтинговые компании,
             какие подводные камни могут встретиться у клиентов и как защитить
             свои интересы. Мне важно не просто анализировать, а
@@ -635,15 +663,15 @@
                 <i class="fas fa-envelope"></i>
               </div>
               <a href="#">
-                <strong>Email:</strong> elena.vlasova@reviews-check.com
+                <strong>Email:</strong> elena.vlasova@stablereviews.com
               </a>
             </div>
-            <div class="contact-item">
+            <!-- <div class="contact-item">
               <div class="contact-icon">
                 <i class="fab fa-telegram"></i>
               </div>
               <a href="#"><strong>Telegram:</strong> @ElenaVlasovaExpert</a>
-            </div>
+            </div> -->
             <!-- <div class="contact-item">
               <div class="contact-icon">
                 <i class="fab fa-linkedin"></i>
