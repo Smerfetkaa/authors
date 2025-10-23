@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты - Портал с реальными отзывами Stablereviews</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #fff;
+      }
+
+      .contacts-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .page-title {
+        font-size: 36px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .contacts-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 50px;
+      }
+
+      .contact-info-section {
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .section-title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #af7dff;
+      }
+
+      .contact-item {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .contact-label {
+        font-weight: 600;
+        color: #555;
+        min-width: 150px;
+        display: inline-block;
+      }
+
+      .contact-value {
+        color: #333;
+      }
+
+      .contact-value a {
+        color: #af7dff;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .contact-value a:hover {
+        color: #2c5aa0;
+        text-decoration: underline;
+      }
+
+      .help-section {
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px;
+      }
+
+      .help-list {
+        list-style: none;
+        margin-top: 20px;
+      }
+
+      .help-item {
+        padding: 15px;
+        margin-bottom: 12px;
+        background: #f9f9f9;
+        border-left: 4px solid #af7dff;
+        border-radius: 4px;
+        transition: all 0.3s;
+      }
+
+      .help-item:hover {
+        background: #f0f7ff;
+        transform: translateX(5px);
+      }
+
+      .help-item-title {
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 5px;
+      }
+
+      .help-item-description {
+        color: #666;
+        font-size: 14px;
+      }
+
+      .form-section {
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-intro {
+        color: #666;
+        margin-bottom: 25px;
+        line-height: 1.8;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .form-label .required {
+        color: #e74c3c;
+      }
+
+      .form-input,
+      .form-textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+        font-family: inherit;
+        transition: border-color 0.3s;
+      }
+
+      .form-input:focus,
+      .form-textarea:focus {
+        outline: none;
+        border-color: #af7dff;
+        box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+      }
+
+      .form-textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .checkbox-group {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 25px;
+      }
+
+      .checkbox-input {
+        width: 18px;
+        height: 18px;
+        margin-right: 10px;
+        margin-top: 3px;
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+
+      .checkbox-label {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+        cursor: pointer;
+      }
+
+      .checkbox-label a {
+        color: #af7dff;
+        text-decoration: none;
+      }
+
+      .checkbox-label a:hover {
+        text-decoration: underline;
+      }
+
+      .submit-btn {
+        background: linear-gradient(180deg, #907dff 0%, #af7dff 100%);
+        color: #fff;
+        padding: 14px 40px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .submit-btn:hover {
+        background: linear-gradient(180deg, #907dff 0%, #907dff 100%);
+      }
+
+      .submit-btn:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+      }
+
+      .sla-notice {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 4px;
+      }
+
+      .sla-notice strong {
+        color: #1a1a1a;
+      }
+
+      @media (max-width: 768px) {
+        .contacts-grid {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .page-title {
+          font-size: 28px;
+        }
+
+        .section-title {
+          font-size: 20px;
+        }
+
+        .contact-item {
+          flex-direction: column;
+        }
+
+        .contact-label {
+          min-width: auto;
+          margin-bottom: 5px;
+        }
+      }
+      /* Quote banner */
+      .sr-quote {
+        display: flex;
+        margin: 20px 0;
+        padding: 16px 18px;
+        border-radius: 14px;
+        justify-content: center;
+        font-size: 28px;
+        line-height: 1.5;
+        flex-direction: column;
+      }
+
+      /* Декоративные кавычки без картинок */
+      .quote-top {
+        text-align: start;
+        font-size: 120px;
+        line-height: 0.3;
+        opacity: 0.45;
+      }
+      .quote-button {
+        text-align: end;
+        font-size: 120px;
+        line-height: 0.7;
+        opacity: 0.45;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Здесь должен быть ваш header -->
+
+    <div class="contacts-container">
+      <h1 class="page-title">Контакты</h1>
+
+      <div class="contacts-grid">
+        <section class="sr-quote" role="note" aria-label="Редакционный месседж">
+          <div class="quote-top">“</div>
+          <p>
+            <strong>Наш приоритет — финансовая безопасность читателей.</strong>
+            А становиться лучше мы можем только слушая вас.
+          </p>
+          <div class="quote-button">“</div>
+        </section>
+        <div class="contact-info-section">
+          <h2 class="section-title">Контактная информация</h2>
+
+          <div class="contact-item">
+            <span class="contact-label">Телефон:</span>
+            <span class="contact-value"
+              ><a href="tel:+74951453261">+7 (495) 145-32-61</a></span
+            >
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label">Email:</span>
+            <span class="contact-value"><a href="">help@stablereviews.com</a></span>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label">Адрес:</span>
+            <span class="contact-value"
+              >Воскресенский пр-т., 13, Йошкар-Ола, Республика Марий Эл</span
+            >
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">ИИН:</span>
+            <span class="contact-value">120802896500 </span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">ОГРН:</span>
+            <span class="contact-value">304120816000010 </span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Время работы:</span>
+            <span class="contact-value"
+              >Пн-Пт: 10:00 - 19:00<br />Сб-Вс: выходной</span
+            >
+          </div>
+
+          <div class="sla-notice">
+            <strong>Ожидаемое время ответа:</strong><br />
+            В рабочие часы отвечаем в течение 24 часов
+          </div>
+        </div>
+      </div>
+      <div class="contacts-grid">
+        <div class="contact-info-section">
+          <h2 class="section-title">Чем мы можем быть полезны</h2>
+          <ul class="help-list">
+            <li class="help-item">
+              <div class="help-item-title">
+                Хотите понять, можно ли доверять проекту?
+              </div>
+              <div class="help-item-description">
+                Проверим и объясним понятным языком.
+              </div>
+            </li>
+            <li class="help-item">
+              <div class="help-item-title">Столкнулись с проблемой?</div>
+              <div class="help-item-description">
+                Расскажите, мы аккуратно оформим кейс.
+              </div>
+            </li>
+            <li class="help-item">
+              <div class="help-item-title">Заподозрили мошенничество?</div>
+              <div class="help-item-description">
+                Примем сигнал и поможем собрать факты.
+              </div>
+            </li>
+            <li class="help-item">
+              <div class="help-item-title">Нужен комментарий компании?</div>
+              <div class="help-item-description">
+                Попросим официальную позицию.
+              </div>
+            </li>
+            <li class="help-item">
+              <div class="help-item-title">Есть идея для материала?</div>
+              <div class="help-item-description">
+                Рассмотрим тему и уточним детали.
+              </div>
+            </li>
+            <li class="help-item">
+              <div class="help-item-title">Нашли неточность?</div>
+              <div class="help-item-description">
+                Обновим карточку после проверки источников.
+              </div>
+            </li>
+            <li class="help-item">
+              <div class="help-item-title">Неудобно пользоваться сайтом?</div>
+              <div class="help-item-description">Подскажите, что улучшить.</div>
+            </li>
+          </ul>
+        </div>
+        <div class="form-section">
+          <h2 class="section-title">Напишите нам</h2>
+          <p class="form-intro">
+            Если у вас есть вопросы, предложения, либо же вы просто хотите
+            получить консультацию – заполните форму ниже и мы свяжемся с вами в
+            ближайшее время.
+          </p>
+
+          <form action="#" method="POST" id="contactForm">
+            <div class="form-group">
+              <label class="form-label" for="name">
+                Ваше имя <span class="required">*</span>
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-input"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">
+                Ваш e-mail <span class="required">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="phone">
+                Номер телефона <span class="required">*</span>
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="form-input"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="subject"> Тема </label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                class="form-input"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message"> Сообщение </label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-textarea"
+              ></textarea>
+            </div>
+
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                id="privacy"
+                name="privacy"
+                class="checkbox-input"
+                required
+              />
+              <label for="privacy" class="checkbox-label">
+                Я согласен с
+                <a href="/politika-konfidenczialnosti/" target="_blank"
+                  >политикой конфиденциальности</a
+                >
+                и даю согласие на обработку персональных данных
+                <span class="required">*</span>
+              </label>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              Отправить сообщение
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Здесь должен быть ваш footer -->
+
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script>
+      // Простая валидация формы
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const phone = document.getElementById("phone").value.trim();
+          const privacy = document.getElementById("privacy").checked;
+
+          if (!name || !email || !phone) {
+            alert("Пожалуйста, заполните все обязательные поля");
+            return;
+          }
+
+          if (!privacy) {
+            alert("Необходимо согласие с политикой конфиденциальности");
+            return;
+          }
+
+          // Здесь должна быть отправка формы
+          alert(
+            "Форма успешно отправлена! Мы свяжемся с вами в ближайшее время."
+          );
+          this.reset();
+        });
+    </script>
+  </body>
+</html>
